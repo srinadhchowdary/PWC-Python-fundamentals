@@ -1,0 +1,109 @@
+In Python, recall who detects the syntax error and when. 
+
+Select one:
+
+compiler/at runtime
+
+interpreter/at runtime
+
+compiler/at compile time
+
+interpreter/at compile time
+
+The correct answer is: interpreter/at runtime
+
+Question 2
+Correct
+Mark 1 out of 1
+Flag question
+Question text
+
+Identify the symbol that a Python single line comment begins with.
+
+Select one:
+
+/*
+
+$$
+
+//
+
+#
+
+The correct answer is: #
+
+Question 3
+Correct
+Mark 1 out of 1
+Flag question
+Question text
+
+Identify the style that the python paragraph comment uses. 
+
+Select one:
+
+/* comments */
+
+// comments //
+
+''' comments '''
+
+
+The correct answer is: ''' comments '''
+
+Question 4
+Correct
+Mark 1 out of 1
+Flag question
+Question text
+
+Select the command to be used to start Python from the command prompt.
+
+Select one:
+
+go python
+
+run python
+
+python
+
+execute python
+
+The correct answer is: python
+
+Question 5
+Correct
+Mark 1 out of 1
+Flag question
+Question text
+
+Select the correct code. 
+
+A.
+ print("Programming is fun")
+    print("Python is fun")
+
+
+ B.
+ print("Programming is fun")
+ print("Python is fun")
+
+ C.
+ print("Programming is fun)
+ print("Python is fun")
+
+ D.
+
+print("Programming is fun")
+print("Python is fun)
+
+Select one:
+
+D
+A
+
+B
+
+C
+
+The correct answer is: B
