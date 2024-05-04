@@ -1,0 +1,14 @@
+# Open the input file in read mode
+with open("file_in.txt", "r") as file_in:
+    # Read the content of the input file
+    content = file_in.read()
+
+# Open the output file in write mode
+with open("file_out.txt", "w") as file_out:
+    # Write the content to the output file
+    file_out.write(content)
+
+# Open and display the content of the output file
+with open("file_out.txt", "r") as file_out:
+    output_content = file_out.read()
+    print(output_content)
