@@ -1,0 +1,20 @@
+import csv
+
+# Open the CSV file using DictReader
+with open("OneDayInternational.csv", "r", newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+    
+    # Create a set to store unique countries
+    countries = set()
+    
+    # Iterate over each row in the CSV file
+    for row in reader:
+        # Add the country to the set
+        countries.add(row['Versus'])
+
+# Convert the set to a sorted list
+sorted_countries = sorted(countries)
+
+# Display the sorted list of countries
+for country in sorted_countries:
+    print(country)
