@@ -1,0 +1,36 @@
+class SavingAccount:
+    balance = 20000
+    
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+        
+    def login(self, username, password):
+        if self.username == username and self.password == password:
+            return True
+        else:
+            print("Invalid username or password")
+            return False
+    
+    def withdraw(self, amount):
+        if amount > SavingAccount.balance:
+            print("Insufficient funds to withdraw")
+            return False
+        else:
+            SavingAccount.balance -= amount
+            print("Balance amount after withdrawal is:", SavingAccount.balance)
+            return True
+
+# Create an object of SavingAccount class with hardcoded username and password
+sobj = SavingAccount("Admin", "123")
+
+# Accept username and password from the user
+username = input("Enter user name: ")
+password = input("Enter password: ")
+
+# Call the login function
+if sobj.login(username, password):
+    # If login successful, get the amount to withdraw from the user
+    amount = float(input("Enter the amount to withdraw: "))
+    # Call the withdraw function
+    sobj.withdraw(amount)
