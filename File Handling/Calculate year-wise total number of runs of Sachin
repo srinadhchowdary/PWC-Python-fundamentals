@@ -4,17 +4,22 @@ import csv
 with open("OneDayInternational.csv", "r", newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     
-    # Create a set to store unique countries
-    countries = set()
+    # Create a dictionary to store year-wise total runs
+    year_runs = {}
     
     # Iterate over each row in the CSV file
     for row in reader:
-        # Add the country to the set
-        countries.add(row['Versus'])
+        # Extract the year from the MatchDate field
+        year = row['MatchDate'].split('/')[-1]
+        
+        # Check if the year already exists in the dictionary
+        if year in year_runs:
+            # If yes, add the runs to the existing total
+            year_runs[year] += int(row['Runs'])
+        else:
+            # If no, initialize the total runs for that year
+            year_runs[year] = int(row['Runs'])
 
-# Convert the set to a sorted list
-sorted_countries = sorted(countries)
-
-# Display the sorted list of countries
-for country in sorted_countries:
-    print(country)
+# Display the year-wise total runs
+for year, runs in sorted(year_runs.items()):
+    print(year, runs)
