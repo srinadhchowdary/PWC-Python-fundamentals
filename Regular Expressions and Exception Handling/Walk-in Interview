@@ -1,0 +1,33 @@
+class AgeException(Exception):
+    pass
+
+class SalaryException(Exception):
+    pass
+
+try:
+    name = input("Enter the Name: ")
+    age = int(input("Enter the Age: "))
+
+    if age < 18 or age > 50:
+        raise AgeException("Registration Failed. Age should be greater than 18 and less than 50")
+
+    salary = float(input("Enter the Salary: "))
+
+    if salary <= 0:
+        raise SalaryException("Registration Failed. Salary cannot be a negative number or zero")
+
+    gender = input("Enter the Gender (f/m): ")
+
+    print("Registration Successful")
+    
+except AgeException as e:
+    print(e)
+
+except SalaryException as e:
+    print(e)
+
+except ValueError:
+    print("Invalid input for Age or Salary. Please enter valid numbers.")
+
+finally:
+    print("Best Wishes")
